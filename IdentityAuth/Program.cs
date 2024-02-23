@@ -22,7 +22,7 @@ builder.Services.AddAuthorizationBuilder();
 
 // Register database
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer("Data Source=localhost;Initial Catalog=identity_auth;Integrated Security=True;Encrypt=False"));
+    options.UseSqlite(connectionString: "DataSource=appdata.db"));
 
 builder.Services.AddIdentityCore<AppUser>()
     .AddEntityFrameworkStores<AppDbContext>()
