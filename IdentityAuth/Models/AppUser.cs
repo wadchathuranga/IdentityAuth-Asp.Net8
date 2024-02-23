@@ -1,6 +1,8 @@
-﻿namespace IdentityAuth.Models
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace IdentityAuth.Models
 {
-    public class AppUser
+    public class AppUser : IdentityUser
     {
     }
 }
